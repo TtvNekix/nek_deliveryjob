@@ -1,8 +1,8 @@
 Config = {}
 Config['Version'] = 1.0 -- DON'T TOUCH THIS
 
-Config['EnableWebhook'] = true
-Config['Webhook'] = "https://discord.com/api/webhooks/889962350134845491/ccb4IoyQpqo1ZkxjvZan5p6knpKRdTYtwzz1nnMcU3dQv3Wes9HS89Dh7SIGcV7ArvfF" -- Change me compulsory
+Config['EnableWebhook'] = false
+Config['Webhook'] = "" -- Change me compulsory
 Config['CommunityName'] = "Nekix Delivery Job Logs" -- Change me if you want
 Config['CommunityLogo'] = 'https://cdn.discordapp.com/icons/838115320597446677/a96dc72395659c8d3921bece0ac2039d?size=256' -- Change me if you want
 Config['Avatar'] = 'https://cdn.discordapp.com/icons/838115320597446677/a96dc72395659c8d3921bece0ac2039d?size=256' -- Change me if you want
