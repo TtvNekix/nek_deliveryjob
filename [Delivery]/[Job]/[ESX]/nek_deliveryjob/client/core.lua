@@ -340,14 +340,13 @@ end)
 
 RegisterNetEvent('esx:setJob')
 AddEventHandler('esx:setJob', function(job)
-    PlayerData = ESX.GetPlayerData()
+    	PlayerData = ESX.GetPlayerData()
 	PlayerData.job = job
 	Delivery.Functions.CheckJob()
 end)
 
 local job = false
 Delivery.Functions.CheckJob = function()
-    PlayerData = ESX.GetPlayerData()
     if PlayerData.job.name == Config['Delivery']['JobName'] then
         job = true
     else
