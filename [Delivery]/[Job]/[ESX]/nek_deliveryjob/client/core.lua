@@ -40,10 +40,6 @@ CreateThread(function()
     Delivery.Functions.StartThread()
 end)
 
-RegisterNetEvent('esx:setJob', function()
-    PlayerData = ESX.GetPlayerData()
-end)
-
 RegisterNetEvent('nek_deliveryjob:stopJob', function()
     TriggerServerEvent('nek_delivery:wb', "The player with Identifier **".. PlayerData.identifier .."** has stopped working")
     inJob = false
@@ -342,10 +338,28 @@ RegisterCommand('stopanim', function()
     ClearPedTasksImmediately(PlayerPedId())
 end)
 
+RegisterNetEvent('esx:setJob')
+AddEventHandler('esx:setJob', function(job)
+    PlayerData = ESX.GetPlayerData()
+	PlayerData.job = job
+	Delivery.Functions.CheckJob()
+end)
+
+local job = false
+Delivery.Functions.CheckJob = function()
+    PlayerData = ESX.GetPlayerData()
+    if PlayerData.job.name == Config['Delivery']['JobName'] then
+        job = true
+    else
+        job = false
+    end
+end
+
 Delivery.Functions.StartThread = function()
     CreateThread(function()
         Wait(2000)
         while true do
+		Delivery.Functions.CheckJob()
             local msec = 3000
             local playerPed = PlayerPedId()
             local pedCoords = GetEntityCoords(playerPed)
