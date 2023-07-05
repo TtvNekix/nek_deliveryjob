@@ -1,17 +1,7 @@
 Delivery = {}
 Delivery.Functions = {}
 
-QBCore = nil
-
-Citizen.CreateThread(function() 
-    while true do
-        Citizen.Wait(10)
-        if QBCore == nil then
-            TriggerEvent("QBCore:GetObject", function(obj) QBCore = obj end)    
-            Citizen.Wait(200)
-        end
-    end
-end)
+QBCore = exports['qb-core']:GetCoreObject()
 
 local inJob = false
 local haveClothes = false
