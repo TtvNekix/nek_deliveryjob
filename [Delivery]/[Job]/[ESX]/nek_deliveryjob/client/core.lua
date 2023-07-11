@@ -355,7 +355,7 @@ end
 
 Delivery.Functions.StartThread = function()
     CreateThread(function()
-        Wait(2000)
+        Wait(5000)
         while true do
 		Delivery.Functions.CheckJob()
             local msec = 3000
