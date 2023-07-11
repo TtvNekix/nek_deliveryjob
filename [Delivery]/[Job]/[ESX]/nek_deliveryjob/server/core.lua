@@ -1,6 +1,5 @@
 Delivery = {}
 Delivery.Functions = {}
-ESX = exports['es_extended']:getSharedObject()
 
 Delivery.Functions.SendWB = function(msg)
 	if Config['EnableWebhook'] then
