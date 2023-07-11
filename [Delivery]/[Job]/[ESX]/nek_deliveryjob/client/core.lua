@@ -1,6 +1,5 @@
 Delivery = {}
 Delivery.Functions = {}
-ESX = exports['es_extended']:getSharedObject()
 
 local inJob = false
 local haveClothes = false
