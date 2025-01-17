@@ -16,7 +16,7 @@ local comeBack = false
 local dest_blip, blipStatus
 local data = {}
 
-CreateThread(function()
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     Wait(3000)
 
     while PlayerData == nil do
