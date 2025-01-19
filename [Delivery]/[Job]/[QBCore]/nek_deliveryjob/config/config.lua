@@ -1,5 +1,5 @@
 Config = {}
-Config['Version'] = 1.1 -- DON'T TOUCH THIS
+Config['Version'] = 1.2 -- DON'T TOUCH THIS
 
 Config['EnableWebhook'] = false
 Config['Webhook'] = "" -- Change me compulsory
